@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>This Jquery UI</h2>
+        <h3>Draggable interaction</h3>
+        <div style="border: 1px solid brown;">
+        <div id="mydiv1" class="mydivs" >
+        CUBE
+        </div><br>
+        <div id="mydiv" class="mydivs">
+            CUBE
+            </div>
+        </div>
+    </body>
+    <script src="jquery.js"></script>
+    <script src="jQuery_UI/jquery-ui.js">//THIS SCRIPT SHOULD ALWAYS BELOW CORE JQUERY SCRIPT AS THIS JQUERY UI GENERATED FROM CORE JQUERY-->
+    </script>
+    <script>
+        $(".mydivs").draggable({
+            //axis:"y",
+            //grid:[300,300],
+            //containment:"parent",
+             containment:"document",
+            cursor:"grabbing",
+            opacity:"0.5",
+            snap:true,
+            snaptolerence:30,
+        });
+
+    </script> 
+        
+    
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form action="10message.html">
+        Username:<input type="text" placeholder="username" id="uname"/><br>
+        <label id="lb1" style="color: red; visibility:hidden;">invalid</label>
+        <br><br>
+        <button onclick="regexpncheck()" type="button">Submit</button>
+        </form>
+    </body>
+    <script>
+        function regexpncheck(){
+            var username = document.getElementById("uname");
+            var regx=/E00/i;//if we type capital or small letter it doesn't matter if we include i with the regular expression
+            if(regx.test(username.value)){
+                alert("valid username");
+                
+            }
+            else{
+                alert("invalid username")
+                 document.getElementById("lb1").style.visibility="visible";
+                username.style.border="solid 1px red";
+            }
+
+        }
+    </script>
+</html>

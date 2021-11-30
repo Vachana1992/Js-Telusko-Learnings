@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Homework
+        </title>
+    </head>
+    <body>
+        <h2>Please sign in!</h2>
+        <br>
+        Username : <input type="text" placeholder="Enter your username" id="username">
+        <br><br>
+        Password: <input type="password" placeholder="Enter your password" id="pwd">
+        <br><br>
+        <button onclick="Clickme()">submit</button>
+        <h4 id="heading4"></h4>  
+    </body>
+    <script>
+        function Clickme(){
+            var str1=document.getElementById("username").value;
+            var str2= document.getElementById("pwd").value;
+            if(str1==str2){
+                alert("Usename and password correct!")
+                document.write("<h2>Signed in</h2><br>Username: "+str1+"<br><br> Password: "+str2)
+            }
+            else{
+                alert("username and password incorrect!");
+                document.getElementById("heading4").innerHTML="Username and password should be the same!!"
+
+            }
+        }
+    </script>
+</html>

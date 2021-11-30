@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2> DOM Manipulation in jquery </h2>
+
+       
+
+        <div id="firstdiv" class="mydiv">
+
+            <p id="para" class="pClass"><i>This is the <b>first para</b> in first div</i></p>
+
+        </div>  
+        
+       
+        <br><br>      
+        
+        <button id="btn4">Append</button>
+        <button id="btn5">After</button>
+        <button id="btn6">Prepend</button>
+        <button id="btn7">Before</button>
+        <button id="btn8">Remove</button>
+        <button id="btn9">Empty</button><br><br>
+
+        <div id="seconddiv" class="mydiv">
+
+            <p id="para1" class="p2Class"><i>This is the <b>first para</b> in second div</i></p>
+            <p id="para2" class="p3Class"><i>This is the <b>second para</b> in second div</i></p>
+
+        </div>
+        <button id="btn1">Remove1</button>
+        <button id="btn2">Remove2</button>
+        
+        
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        //append() - Inserts content at the end of the selected elements
+        // prepend() - Inserts content at the beginning of the selected elements
+        // after() - Inserts content after the selected elements
+        // before() - Inserts content before the selected elements   
+        // remove() - Removes the selected element (and its child elements)
+        // empty() - Removes the child elements from the selected elements
+
+        $(document).ready(function(){
+            
+           $("#btn4").click(function(){
+               $("#firstdiv").append("This is the Second paragraph in first div");
+           })
+
+           $("#btn5").click(function(){
+               $("#firstdiv").after("This is the Second paragraph in first div");
+           })
+
+           $("#btn6").click(function(){
+               $("#firstdiv").prepend("This is the Second paragraph in first div");
+           })
+
+           $("#btn7").click(function(){
+               $("#firstdiv").before("This is the Second paragraph in first div");
+           })
+
+           $("#btn8").click(function(){
+               $("#firstdiv").remove();
+
+           })
+
+           $("#btn9").click(function(){
+               $("#firstdiv").empty();
+           })
+
+           $("#btn1").click(function(){
+               $("p").remove("#para2");
+           })
+           $("#btn2").click(function(){
+               $("p").remove("#para1,.p3Class");
+           })
+
+            })
+</script>
+    </html>

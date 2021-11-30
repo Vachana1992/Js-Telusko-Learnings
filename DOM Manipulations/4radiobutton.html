@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Radio Button</title>
+    </head>
+    <body>
+        
+        <input type="radio" value="html" name="grp1" id=rd1>Html<br> 
+        <input type="radio" value="css" name="grp1" id=rd2>CSS<br>
+        <input type="radio" value="js" name="grp1" id=rd3>JavaScript<br><br>
+        <button onclick="clickMe()">Click me</button>
+    </body>
+    <script>
+        //in html section,we can select only one radiobtm at a stime because we have group them in one name grp1.
+        function clickMe(){
+            var str1=document.getElementById("rd1");
+            var str2=document.getElementById("rd2");
+            var str3=document.getElementById("rd3");
+            if(str1.checked==true){
+                alert("Checked radio button is: "+str1.value);
+            }
+            else if(str2.checked){
+                alert("Checked radio button is: "+str2.value);
+            }
+            else if(str3.checked){
+                alert("Checked radio button is: "+str3.value)
+            }
+            else{
+                alert("Check any radio button!")
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2> Selectors in jquery</h2>
+        <p> This is the first para</p>
+        <div id="firstdiv" class="mydiv">
+            <p id="para">This is the first para in first div</p>
+            <p>This is the second para in first div</p>
+
+        </div>
+
+        <div id="seconddiv" class="mydiv">
+            <p>This is the first para in first div</p>
+            <p>This is the second para in first div</p>
+
+        </div>
+
+        <div id="thirddiv" class="mydiv">
+            <ul>
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+            </ul>
+
+        </div>
+        <button onclick="fn1()">ClickMe</button>
+        <button onclick="fn2()">ClickMe2</button>
+        <button onclick="fn3()">ClickMe3</button>
+        <button onclick="fn4()">ClickMe4</button>
+        <button onclick="fn5()">ClickMe5</button>
+        <button onclick="fn6()">ClickMe6</button>
+
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        function fn1(){
+            $("p:first").fadeToggle(); //first para will disapper
+        }
+        function fn2(){
+            $("li:even").fadeToggle(); //even numbers list item disapper
+        }
+        function fn3(){
+            $("#firstdiv,#thirddiv").fadeToggle(); //first and third div only disapper
+        }
+        function fn4(){
+            $("#firstdiv,#seconddiv,p").fadeToggle(); //first and third div only  and all paradisapper
+        }
+        function fn5(){
+            $("div p").fadeToggle(); //para in div will disappear
+        }
+        function fn6(){
+            $(".mydiv:first").fadeToggle(); //item in the first div will disappear
+        }
+    </script>
+</html>

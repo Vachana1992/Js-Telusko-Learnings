@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>My title</title>
+        <body></body>
+        <script>
+          var people ={ name:"vachana",
+                        age:29, gender:"f",
+                        dance:function(){
+                            return("<p>She can dance</p>")
+                        }                        
+                    }
+                    document.write("<p>"+people.name+"</p>"+people.dance())
+
+        function cars(car_brand,car_model,car_price){
+            this.car_brand=car_brand;
+            this.car_model=car_model;
+            this.car_price=car_price;
+            this.testautopilot= function(){
+                document.write("<h2>this has autopilot</h2>")
+            }
+        }  
+        var c1 = new cars("Tesla","model1",35000)
+        var c2 = new cars("audi","model2",34890)
+        document.write(c1.car_brand)
+        document.write(c2.car_price)
+        document.write(c1.testautopilot)
+
+
+        cars.fueltype="Electric"
+        document.write("<h2>"+cars.fueltype+"</h2>")
+
+        </script>
+    </head>
+</html>

@@ -1,0 +1,24 @@
+.mydiv{
+    border: 1px solid blue;
+    margin:5px;
+    padding: 10px;
+}
+
+#cube{
+    width: 50px;
+    height: 50px;
+    background-color:blueviolet;
+    opacity: 0.4;
+    padding: 10px;
+    position: absolute;
+}
+
+.newstyle{
+    border-radius: 10px;
+    background-color: rgb(233, 219, 97);
+    border: 2px solid red;
+}
+.newstyle2{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}

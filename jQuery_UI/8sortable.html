@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>This Jquery UI</h2>
+        <h3>sortable interaction</h3>
+        <div id="cubes">
+        <div id="mydiv1" class="mydivs" >
+        CUBE1
+        </div>
+        <div id="mydiv2" class="mydivs">
+            CUBE2
+            </div>
+            <div id="mydiv3" class="mydivs">
+                CUBE3
+                </div>
+        </div>
+    </body>
+    <script src="jquery.js"></script>
+    <script src="jQuery_UI/jquery-ui.js">//THIS SCRIPT SHOULD ALWAYS BELOW CORE JQUERY SCRIPT AS THIS JQUERY UI GENERATED FROM CORE JQUERY-->
+    </script>
+    <script>
+        $("#cubes").sortable({
+            //axis:"y",
+            containment:"parent",
+             //containment:"document",
+            cursor:"grabbing",
+            opacity:"0.5",
+            distance:50,
+            //delay:100
+        });
+
+    </script> 
+        
+    
+</html>

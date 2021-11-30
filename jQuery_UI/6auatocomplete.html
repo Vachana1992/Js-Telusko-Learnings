@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>This Jquery UI</h2>
+        <h3>Auto complete</h3>
+        <button id="btn3">Get properties</button>
+        <button id="btn4">Change properties</button><br><br>
+        <div id="mydiv" class="divs">
+         Enter your favourite city: <input type="text" id="city">
+        </div>
+    
+    </body>
+    <script src="jquery.js"></script>
+    <script src="jQuery_UI/jquery-ui.js">//THIS SCRIPT SHOULD ALWAYS BELOW CORE JQUERY SCRIPT AS THIS JQUERY UI GENERATED FROM CORE JQUERY-->
+    </script>
+    <script>
+    var mycity =["Newyork","Panjim","Newdelhi","pune","Mumbai"," Mysore","Indore","NewJersey"];
+     $("#city").autocomplete({
+         source:mycity,
+     },
+     {
+        autoFocus:true,
+        delay:20,
+        minLength:2
+     });
+
+     $("#btn3").click(function(){
+          var drag= $("#city").autocomplete("option","autoFocus");
+          alert(drag);
+      })
+
+      $("#btn4").click(function(){
+          $("#city").autocomplete("option","autoFocus",false);
+          
+      })
+
+    </script> 
+        
+    
+</html>

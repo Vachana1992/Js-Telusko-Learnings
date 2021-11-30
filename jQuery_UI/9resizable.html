@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>This Jquery UI</h2>
+        <h3>Resizing interaction</h3>
+        <div id="cubes">
+        <div id="mydiv1" class="divs" >
+        <img src="images/img3.jpg" width="80" id="resize" alt="">        
+    </div>
+        
+        </div>
+    </body>
+    <script src="jquery.js"></script>
+    <script src="jQuery_UI/jquery-ui.js">//THIS SCRIPT SHOULD ALWAYS BELOW CORE JQUERY SCRIPT AS THIS JQUERY UI GENERATED FROM CORE JQUERY-->
+    </script>
+    <script>
+       $("#resize").resizable({
+           maxWidth:500,
+           maxHeight:500,
+           autoHide:true,
+           //distance:200,
+            ghost:true,
+            aspectRatio:true
+       });
+
+    </script> 
+        
+    
+</html>

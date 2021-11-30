@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>This Jquery UI</h2>
+        <h3>Accordion UI</h3>
+        <button id="btn1">Get properties</button>
+        <button id="btn2">Change properties</button><br><br>
+        <div id="mydiv">
+         
+            <h3>profile</h3>
+            <p>My name is Vachana Mandattil.
+                Recent graduate in Computer software and database application from Lambton
+            </p>
+            <h3>skills</h3>
+            <p>I have hands-on experience in Java, python,HTML/CSS, Javascript
+            </p>
+            <h3>Education</h3>
+            <p>Lambton -post graduation and Cochin University- Engineering
+            </p>
+            <h3>Background</h3>
+            <p>vachana is from Kerala, the god's own country in India. Vachana has her mother and one younger sister in her home.Her father passed away 6 years ago. She lives in Canada with her husband Saikrishnan Kuniyil who is working as a tool and die engineer, and he is also from kerala and he has his mother, father and grandfather in his home back in India. 
+            </p>
+        </div>
+    </body>
+    <script src="jquery.js"></script>
+    <script src="jQuery_UI/jquery-ui.js">//THIS SCRIPT SHOULD ALWAYS BELOW CORE JQUERY SCRIPT AS THIS JQUERY UI GENERATED FROM CORE JQUERY-->
+    </script>
+    <script>
+      $("#mydiv").accordion({
+        heightStyle:true,
+        collapsible:true,
+        event:"click",
+        animate:1000,
+        active:3,
+        icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+
+      });
+
+       //getter and setter methods to chanage these attributes value
+       $("#btn1").click(function(){
+          var activewindow= $("#mydiv").accordion("option","active");
+          alert(activewindow);
+      })
+
+      $("#btn2").click(function(){
+          $("#mydiv").accordion("option","active",2);
+          
+      })
+      
+    </script> 
+        
+    
+</html>

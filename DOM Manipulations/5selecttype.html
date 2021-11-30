@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            Select
+        </title>
+    </head>
+    <body>
+        <select id="selectvalue">
+            <option value="select">Select</option>
+            <option value="html">Html</option>
+            <option value="css">CSS</option>
+            <option value="js">Javascript</option>
+        </select><br><br>
+        <button onclick="clickMe()">Click me</button>
+    </body>
+    <script>
+        function clickMe(){
+            var str = document.getElementById("selectvalue");
+            alert(str.options[str.selectedIndex].value);
+        }
+    </script>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <body>
+            <h2 id="heading2">Some Random text</h2>
+            <button onclick="buttonClick()" >Click for alert</button>
+            <button onclick="changeText()">click for change text</button>
+        </body>
+        <script>
+            function buttonClick(){
+                //alert("Hi")
+                //getElementbyId will identify the element with the specified id and innerHTML returns the text value attached with that element
+                var str1= document.getElementById("heading2").innerHTML
+                alert(str1)
+            }
+            function changeText(){
+                document.getElementById("heading2").innerHTML="My name is Vachana"
+            }
+        </script>
+    </head>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <body>
+        Phone Number:<input type="text" placeholder="phone number" id="ph">
+        <label id="lb1" style="color: red; visibility: hidden;">Invalid</label>
+        <br><br>
+        <button type="button" onclick="mobile()">Submit</button>
+    </body>
+    <script>
+        // \d---> match any digit (equal to [0-9])
+        // \w---> match any word character(equals to a-z,A-z,0-9,_)
+        // \s---> match whitespaces and tabs
+        // \t----> match tabs only
+
+        // /^[7-9]/--->the starting must be number in between 7-9. this is different from/[^7-9]/ this is exclusio n , here we will exclude number 7-9
+        // /[7-9]$/---> the ending should be numbers 7-9
+        //  /\d{9}/--->match any digit (equal to [0-9]), and there are 9 more characters with the same numbers
+        function mobile(){
+        var phonenum=document.getElementById("ph");
+        var regx = /^[7-9]\d{9}$/;
+        if(regx.test(phonenum.value)){
+            document.getElementById("lb1").innerHTML="Valid Number";
+            document.getElementById("lb1").style.visibility="visible";
+            document.getElementById("lb1").style.color="green";
+        }
+        else{
+            document.getElementById("lb1").innerHTML="invalid number";
+            document.getElementById("lb1").style.visibility="visible";
+            document.getElementById("lb1").style.color="red";
+        }
+    }
+    </script>
+</html>

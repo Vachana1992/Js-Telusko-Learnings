@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2> DOM Manipulation in jquery</h2>
+
+        <p> This is the first para</p>
+        <div id="firstdiv" class="mydiv">
+            <p id="para" class="pClass"><i>This is the <b>first para</b> in first div</i></p>
+
+        </div>        
+        
+        <button id="btn4">Click me</button>
+        <button id="btn5">Click me2</button>
+        <button id="btn6">Click me3</button>
+        <button id="btn7">Click me4</button>
+        <button id="btn8">Click me5</button>
+        <button id="btn9">Click me6</button>
+        
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $("#btn4").click(function(){
+                //alert($("#para").text());
+                var output=$("#para").text();
+                alert(output)
+            }) 
+            $("#btn5").click(function(){
+                
+                $("#para").text("changed the paragraph");
+            })
+            
+            $("#btn6").click(function(){
+                
+                alert($("#para").html());
+            })
+
+            $("#btn7").click(function(){
+                
+                $("#para").html("<h2>This is the first para in first div</h2>");
+            })
+            $("#btn8").click(function(){
+                
+                alert($("#para").attr("class"));
+            })
+            $("#btn9").click(function(){
+                
+                alert($("#para").css("color"));
+                alert($("#para").css("font-family"));
+            })
+            
+            })
+</script>
+    </html>

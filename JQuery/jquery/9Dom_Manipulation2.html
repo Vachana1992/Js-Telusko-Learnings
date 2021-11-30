@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2> DOM Manipulation in jquery </h2>
+
+        <p> This is the first para</p>
+        <div id="firstdiv" class="mydiv">
+            <p id="para" class="pClass"><i>This is the <b>first para</b> in first div</i></p>
+
+        </div>        
+        
+        <button id="btn4">Get value (attr)</button>
+        <button id="btn5">Set value (attr)</button>
+        <button id="btn6">Get value (css)</button>
+        <button id="btn7">Set value (css)</button>
+        
+        
+        
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            
+            $("#btn4").click(function(){
+                alert($("#para").attr("class"));
+            })
+            
+            $("#btn5").click(function(){
+                $("#para").attr("class","p2Class");
+            })
+
+            $("#btn6").click(function(){
+                alert($("#para").css("font-size"));
+            })
+            
+            $("#btn7").click(function(){
+                $("#para").css("font-size","25px");
+            })
+
+
+            })
+</script>
+    </html>

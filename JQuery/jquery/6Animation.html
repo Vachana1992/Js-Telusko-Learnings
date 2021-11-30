@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2> Animations in jquery</h2>
+
+        <p> This is the first para</p>
+        <div id="firstdiv" class="mydiv">
+            <p id="para">This is the first para in first div</p>
+            <p>This is the second para in first div</p>
+
+        </div>
+
+        <div id="seconddiv" class="mydiv">
+            <p>This is the first para in second div</p>
+            <p>This is the second para in second div</p>
+
+        </div>
+
+        <div id="thirddiv" class="mydiv">
+            <ul>
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+            </ul>
+
+        </div><br>
+        <div id="cube" class="mydivs">Cube</div><br>
+        <br><br><br><br>
+        <button id="btn4">Animate</button>
+       
+        
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $("#btn4").click(function(){
+                $("#cube").animate({
+                    left:"150px",
+                    height:"100px",
+                    width:"100px",
+                    opacity:1
+                
+                },1000)
+                
+            })
+        });
+    </script>
+    </html>

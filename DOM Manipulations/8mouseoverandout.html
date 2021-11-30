@@ -1,0 +1,14 @@
+<html>
+    <head></head>
+    <body>
+        <img id="img1" onmouseover="changeImage()" onmouseout="changeAgain()" src="images/img1.jfif" height=200 width=300>
+    </body>
+    <script>
+        function changeImage() {
+            document.getElementById("img1").src="images/img2.jfif"
+        }
+        function changeAgain(){
+            document.getElementById("img1").src="images/img1.jfif"
+        }
+    </script>
+</html>

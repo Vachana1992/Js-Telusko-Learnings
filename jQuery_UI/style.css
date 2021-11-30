@@ -1,0 +1,15 @@
+.divs{
+    border: 1px solid purple;
+    padding: 10px;
+    margin: 10px;
+}
+
+.mydivs{
+    border: 1px solid purple;
+    padding: 10px;
+    margin: 10px;
+    height: 5%;
+    width: 10%;
+    background-color: aqua;
+    display: inline-block;
+}

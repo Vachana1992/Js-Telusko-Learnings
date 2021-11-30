@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <br><br>
+        <img onmouseover="expand()" onmouseout="shrink()"    src="images/img3.jpg" id="img" width="100">
+        
+    </body>
+    <script>
+        var intervalId=0;
+        var width=100;
+        var difference=2;
+        function expand(){
+            clearInterval(intervalId);
+            intervalId=setInterval(zoomin,20);
+        }
+        function zoomin(){
+            if(width<200){
+                width= width+difference;
+                document.getElementById("img").width=width;
+            }
+            else{
+                clearInterval(intervalId);
+            }
+        }
+
+        function shrink(){
+            clearInterval(intervalId);
+            intervalId=setInterval(zoomout,20);
+        }
+        function zoomout(){
+            if(width>100){
+                width= width-difference;
+                document.getElementById("img").width=width;
+            }
+            else{
+                clearInterval(intervalId);
+            }
+        }
+    </script>
+</html>

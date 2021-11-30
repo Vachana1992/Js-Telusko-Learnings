@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2> Callback and Chaining Effect in jquery</h2>
+
+        <p> This is the first para</p>
+        <div id="firstdiv" class="mydiv">
+            <p id="para">This is the first para in first div</p>
+            <p>This is the second para in first div</p>
+
+        </div>
+
+        <div id="seconddiv" class="mydiv">
+            <p>This is the first para in second div</p>
+            <p>This is the second para in second div</p>
+
+        </div>
+        
+        <button id="btn4">Toggle</button>
+        <button id="btn5">Toggle2</button>
+        <button id="btn6">ChainingEffect</button>
+       
+        
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $("#btn4").click(function(){
+                $("#firstdiv").slideToggle(1000,function(){
+                    alert("effect completed");
+                })
+            })
+
+            $("#btn5").click(function(){
+                $("#seconddiv").slideToggle(1000,printMsg);
+                 
+             
+                function printMsg(){
+                    alert("effect completed");
+                }
+                
+            })
+
+            $("#btn6").click(function(){
+                $("#firstdiv").slideUp(1000,function(){
+                    alert("Slide up function has completed");
+                }).slideDown(1000).fadeOut(1000).fadeIn(1000,function(){
+                    alert("all chaining effects have completed")
+                })
+            })
+
+        })
+       
+    </script>
+    </html>

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h3>This Jquery UI</h3>
+        <button id="btn1">Get properties</button>
+        <button id="btn2">Change properties</button><br><br>
+        <div id="mydiv">
+            <input type="text" id="dateinput">
+        </div><br>
+        
+    </body>
+    <script src="jquery.js"></script>
+    <script src="jQuery_UI/jquery-ui.js">//THIS SCRIPT SHOULD ALWAYS BELOW CORE JQUERY SCRIPT AS THIS JQUERY UI GENERATED FROM CORE JQUERY-->
+    </script>
+    <script>
+      //$("#dateinput").datepicker();  
+      $("#dateinput").datepicker({
+          numberOfMonths:1,
+          changeYear:true,
+          changeMonth:true,
+          showWeek:true,
+          weekHeader:"week_no",
+          showOtherMonths:true,
+          minDate:new Date(2015,0,4),
+          maxDate: new Date(2022,0,10)
+      });   
+      
+      //getter and setter methods to chanage these attributes value
+      $("#btn1").click(function(){
+          var months= $("#dateinput").datepicker("option","numberOfMonths");
+          alert(months);
+      })
+
+      $("#btn2").click(function(){
+          $("#dateinput").datepicker("option","numberOfMonths",3);
+          
+      })
+    </script> 
+        
+    
+</html>

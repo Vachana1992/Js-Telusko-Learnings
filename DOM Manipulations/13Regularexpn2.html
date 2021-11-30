@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <form action="10message.html">
+        Username:<input type="text" placeholder="username" id="uname"/><br>
+        <label id="lb1" style="color: red; visibility:hidden;">invalid</label>
+        <br><br>
+        <button onclick="regexpncheck()" type="button">Submit</button>
+        </form>
+    </body>
+    <script>
+        function regexpncheck(){
+            var username = document.getElementById("uname");
+            var regx=/E00/i; //The string must contain E00 OR e00
+            var regx=/[sdp]imple/;//The string should be simple,dimpleor pimple. As the character set include sdp
+            var regx=/[a-x]imple/; //the string should starts with any letter in betwwn a-x and imple must be attached to it
+            var regx=/[a-s]tyu[1-3]lm[7d]/;//the string starts with any letter in between a tos then attach "tyu " then any or all the numbers in between 1-3 and then "lm" then string contain either 7 or d or both 7 and d.
+            var regx=/[^abc]chana/; //the string should not start with aor bor c.
+            if(regx.test(username.value)){
+                alert("valid username");
+                
+            }
+            else{
+                alert("invalid username")
+                 document.getElementById("lb1").style.visibility="visible";
+                username.style.border="solid 1px red";
+            }
+
+        }
+    </script>
+</html>

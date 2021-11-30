@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jQuery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>This Jquery UI</h2>
+        <h3>Message vbox</h3>
+        <button id="btn3">Get properties</button>
+        <button id="btn4">Change properties</button><br><br>
+        <div id="mydiv" class="divs">
+         <h3>This is Telusko learning tutorial</h3>
+         <button id="btn1">Click here for messagebox</button>
+        </div>
+        
+        <div id="messagebox" title="messagebox"class="divs">
+            <h3>This is dummy title</h3>
+         <img src="images/img3.jpg"  width="50%"id="img">
+         <!--<button>Click me</button>-->
+        </div>
+    </body>
+    <script src="jquery.js"></script>
+    <script src="jQuery_UI/jquery-ui.js">//THIS SCRIPT SHOULD ALWAYS BELOW CORE JQUERY SCRIPT AS THIS JQUERY UI GENERATED FROM CORE JQUERY-->
+    </script>
+    <script>
+     $("#btn1").click(function(){
+         $("#messagebox").dialog({
+             draggable:false,
+             title:"custom message box",
+             resizable:true,
+             height:"300",
+             width:"300",
+             modal:true,  //we should perform an action in the messagebox only after we can access outside elements ore events of the messagebox. same like terms and condition pop ups in websites. only after clicking ok we can do other things
+            buttons:[{
+                text:"Ok",
+                icon:"ui-icon-check",
+                click: function(){
+                    $(this).dialog(fn1())
+                }
+            },
+            {   
+                text:"close",
+                icon:"ui-icon-closethick",
+                click: function(){
+                    $(this).dialog("close");
+                }
+
+            }]
+            });
+
+            function fn1(){
+                alert("Success!!");
+            }
+
+
+
+    //getter and setter methods to chanage these attributes value
+       $("#btn3").click(function(){
+          var drag= $("#messagebox").dialog("option","draggable");
+          alert(drag);
+      })
+
+      $("#btn4").click(function(){
+          $("#messagebox").dialog("option","draggable",false);
+          
+      })
+     })
+      
+    </script> 
+        
+    
+</html>

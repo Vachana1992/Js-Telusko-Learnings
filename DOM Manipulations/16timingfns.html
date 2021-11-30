@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <button id="bt1" onclick="start()">Start</button><br><br>
+        <h2 id="head">Start timing</h2><br><br>
+        <button id="bt2" onclick="stop()">Stop</button><br><br><br>
+        <hr><hr><br><br>
+        <button id="bt1" onclick="startinterval()">Start</button><br><br>
+        <h2 id="head1">Start interval timing</h2><br><br>
+        <button id="bt2" onclick="stopinterval()">Stop</button>
+    </body>
+    <script>
+        var id=0;
+        function start(){
+           id= window.setTimeout(printMsg,3000);
+        }
+        function printMsg(){
+            document.getElementById("head").innerHTML="Timeout";
+           
+        }
+        function stop(){
+            window.clearTimeout(id);
+        }
+
+
+        var ID=0;
+        var seconds=0;
+        function startinterval(){
+           ID= window.setInterval(printMsg1,1000);
+        }
+        function printMsg1(){
+            document.getElementById("head1").innerHTML=seconds +" seconds";
+            seconds++;
+           
+        }
+        function stopinterval(){
+            window.clearInterval(ID);
+        }
+    </script>
+</html>

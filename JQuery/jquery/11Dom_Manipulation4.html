@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2> DOM Manipulation in jquery </h2>
+
+       
+
+        <div id="firstdiv" class="mydiv">
+
+            <p id="para" class="pClass"><i>This is the <b>first para</b> in first div</i></p>
+
+        </div>  
+        
+       
+        <br><br>      
+        
+        <button id="btn4">Add Class</button>
+        <button id="btn5">Remove class</button>
+        <button id="btn6">Toggle class</button>
+        
+
+        <div id="seconddiv" class="mydiv">
+
+            <p id="para1" class="p2Class"><i>This is the <b>first para</b> in second div</i></p>
+            <p id="para2" class="p3Class"><i>This is the <b>second para</b> in second div</i></p>
+            
+        </div>
+        <button id="btn7">add class</button>
+        <button id="btn8">Remove class</button>
+        
+        
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            
+          $("#btn4").click(function(){
+              $("#firstdiv").addClass("newstyle")
+          });
+
+          $("#btn5").click(function(){
+              $("#firstdiv").removeClass("newstyle")
+          });
+
+          $("#btn6").click(function(){
+              $("#firstdiv").toggleClass("newstyle")
+          });
+          $("#btn7").click(function(){
+              $("#seconddiv").addClass("newstyle newstyle2")
+          });
+
+          $("#btn8").click(function(){
+              $("#seconddiv").removeClass("newstyle newstyle2")
+          });
+
+            })
+</script>
+    </html>

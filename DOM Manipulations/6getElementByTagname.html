@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <p>This is first para</p>
+        <p>This is first para</p>
+        <p>This is first para</p>
+        <p>This is first para</p>
+        <p>This is first para</p>
+        <br><br>
+        <button onclick="ChangeStyle()">Click me</button>
+        <div>
+            <p>div first para</p>
+            <p>div first para</p>
+            <p>div first para</p>
+            <p>div first para</p>
+            <p>div first para</p>
+            <button onclick="ChangeStylediv()">Click me</button>
+        </div>
+    </body>
+    <script>
+        function ChangeStyle(){
+            var str = document.getElementsByTagName("p");
+            str[0].style.fontFamily="Arial";
+            str[1].style.fontSize=30;
+            str[2].style.color="blue";
+            str[3].style.backgroundColor="yellow";
+            str[4].style.color="red"
+        }
+        function ChangeStylediv(){
+            var str=document.getElementsByTagName("div");
+            for(var i=0;i<=str.length;i++){
+                str[i].style.color="#0C13A0";
+                str[i].style.fontSize=25;
+            }
+        }
+    </script>
+</html>

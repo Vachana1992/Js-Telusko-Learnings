@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Hi</title>
+    </head>
+    <Body>
+        <p class="para">This is para 1</p>
+        <p>This is para 2</p>
+        <p class="para">This is para 3</p>
+        <p>This is para 4</p>
+        <p class="para">This is para 5</p>
+        <button onclick="changeStyle()">Click ME</button>
+    </Body>
+    <script>
+        function changeStyle(){
+            var str = document.getElementsByClassName("para");
+            for(var i=0;i<=str.length;i++){
+                str[i].style.color="Green";
+                str[i].style.fontSize=30;
+            }
+        }
+    </script>
+</html>

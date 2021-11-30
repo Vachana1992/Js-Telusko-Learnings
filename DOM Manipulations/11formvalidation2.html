@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="10message.html" >
+            Username: <input type="text" placeholder="Enter your username" id="username">
+            <label id="lb1" style="color: red; visibility: hidden;">Invalid entry</label>
+            <br><br>
+            password: <input type="password" placeholder="Enter your password" id="pwd">
+            <label id="lb2" style="color: red; visibility: hidden;">Invalid entry</label>
+            <label id="lb3" style="color: red; visibility: hidden;">password should be more than 5 letters</label>
+            <br><br>
+            <button type="submit">submit</button>
+        </form>
+    </body>
+    <script>
+        function validate(){
+            var uname = document.getElementById("username");
+            var pword = document.getElementById("pwd");
+            if(uname.value.trim()== ""||pword.value.trim()== ""){  //trim function will trim the space
+                alert("enter your username and password! ");
+                 uname.style.border="solid 1px red";
+                document.getElementById("lb1").style.visibility="visible";
+                pword.style.border="solid 1px red";
+                document.getElementById("lb2").style.visibility="visible";
+                return false;
+            }
+            else if(pword.value.trim().length<5){
+                alert("password too short")
+                document.getElementById("lb3").style.visibility="visible";
+                pword.style.border="1px solid red"
+                return false;
+            }
+            else{
+                    true;
+            }
+        }
+    </script>
+</html>
